@@ -14,7 +14,8 @@
 
 // Ask the user a question
 
-const excited = prompt("Are you excited? Type Y or N.");
+let excited = prompt("Are you excited? Type Y or N.");
+excited = excited.toUpperCase();
 
 if (excited === "Y") {
   alert("I knew you'd say that. It's so cool that you're going to Mars!");
@@ -24,3 +25,14 @@ if (excited === "N") {
   alert("Well, it's too late to back out now.");
 }
 
+// Time to pack
+alert("It's time to pack for your trip to Mars.");
+let numSuitcases = prompt("How many suitcases do you plan to bring?");
+
+numSuitcases = Number(numSuitcases);
+
+if (numSuitcases > 2) {
+  alert("That's way too many. You'll have to pack more lightly.");
+} else {
+  alert("Perfect. You'll certainly fit in the spaceship!");
+}
