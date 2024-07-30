@@ -1,10 +1,12 @@
+// Alerts
+
 alert("Hello!");
 alert("Starting your Mars Adventure!");
 alert("Booting up...");
 alert("All systems go!");
 alert("Let's start!");
 
-// // Ask username and give specific prompt
+// Ask username and give specific prompt
 
 const username = prompt("Hi there. What's your name?");
 
@@ -15,13 +17,14 @@ alert("They need someone to go to Mars this weekend, and YOU'VE been chosen!!");
 // Ask the user a question
 
 let excited = prompt("Are you excited? Type Y or N.");
-excited = excited.toUpperCase();
+excited = excited.toUpperCase().trim();
 
-if (excited === "Y") {
+
+if (excited.startsWith("Y")) {
   alert("I knew you'd say that. It's so cool that you're going to Mars!");
 }
 
-if (excited === "N") {
+if (excited.startsWith("N")) {
   alert("Well, it's too late to back out now.");
 }
 
@@ -37,7 +40,7 @@ if (numSuitcases > 2) {
   alert("Perfect. You'll certainly fit in the spaceship!");
 }
 
-// // // Companion Animal
+// Companion Animal
 alert("You're allowed to bring one companion animal with you.");
 
 const companionType = prompt("What kind of companion animal would you like to bring?");
@@ -54,7 +57,7 @@ companionName = firstLetter + otherLetters;
 
 alert(`Cool, so you're bringing ${companionName} the ${companionType}.`);
 
-// // Spaceship Decor
+// Spaceship Decor
 alert("NASA has an interior design team offering to outfit your spaceship.");
 alert(`You have a couple of options for the interior decor of your ship. Your options are:
   A. Sleek, modern minimalism
@@ -74,8 +77,25 @@ alert(`You have a couple of options for the interior decor of your ship. Your op
     decor = "Steampunk";
   }
 
+// Add another companion animal
+alert("The person you were going to be traveling with has fallen ill. That means you get to bring another companion animal to help keep you company. LUCKY YOU!");
+
+const companionType2 = prompt("What other kind of companion animal would you like to bring?");
+
+let companionName2 = prompt("What is your second companion's name?");
+
+let firstLetter2 = companionName2[0];
+firstLetter2 = firstLetter2.toUpperCase();
+
+let otherLetters2 = companionName2.slice(1);
+otherLetters2 = otherLetters2.toLowerCase();
+
+companionName2 = firstLetter2 + otherLetters2;
+
+alert(`Cool, so you're now bringing ${companionName} the ${companionType} and ${companionName2} the ${companionType2}.`);
+
 // Impress the user
-alert(`${username} and ${companionName}, surfing the celestial abyss, in a ${decor} spaceship.`);
+alert(`${username}, ${companionName}, and ${companionName2} surfing the celestial abyss, in a ${decor} spaceship.`);
 
 // Countdown
 let timer = 5;
