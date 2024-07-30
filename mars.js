@@ -14,45 +14,68 @@
 
 // Ask the user a question
 
-let excited = prompt("Are you excited? Type Y or N.");
-excited = excited.toUpperCase();
+// let excited = prompt("Are you excited? Type Y or N.");
+// excited = excited.toUpperCase();
 
-if (excited === "Y") {
-  alert("I knew you'd say that. It's so cool that you're going to Mars!");
-}
+// if (excited === "Y") {
+//   alert("I knew you'd say that. It's so cool that you're going to Mars!");
+// }
 
-if (excited === "N") {
-  alert("Well, it's too late to back out now.");
-}
+// if (excited === "N") {
+//   alert("Well, it's too late to back out now.");
+// }
 
-// Time to pack
-alert("It's time to pack for your trip to Mars.");
-let numSuitcases = prompt("How many suitcases do you plan to bring?");
+// // Time to pack
+// alert("It's time to pack for your trip to Mars.");
+// let numSuitcases = prompt("How many suitcases do you plan to bring?");
 
-numSuitcases = Number(numSuitcases);
+// numSuitcases = Number(numSuitcases);
 
-if (numSuitcases > 2) {
-  alert("That's way too many. You'll have to pack more lightly.");
-} else {
-  alert("Perfect. You'll certainly fit in the spaceship!");
-}
+// if (numSuitcases > 2) {
+//   alert("That's way too many. You'll have to pack more lightly.");
+// } else {
+//   alert("Perfect. You'll certainly fit in the spaceship!");
+// }
 
-// Companion Animal
-alert("You're allowed to bring one companion animal with you.");
+// // Companion Animal
+// alert("You're allowed to bring one companion animal with you.");
 
-const companionType = prompt("What kind of companion animal would you like to bring?");
+// const companionType = prompt("What kind of companion animal would you like to bring?");
 
-let companionName = prompt("What is your companion's name?");
+// let companionName = prompt("What is your companion's name?");
 
-let firstLetter = companionName[0];
-firstLetter = firstLetter.toUpperCase();
+// let firstLetter = companionName[0];
+// firstLetter = firstLetter.toUpperCase();
 
-let otherLetters = companionName.slice(1);
-otherLetters = otherLetters.toLowerCase();
+// let otherLetters = companionName.slice(1);
+// otherLetters = otherLetters.toLowerCase();
 
-companionName = firstLetter + otherLetters;
+// companionName = firstLetter + otherLetters;
 
-alert(`Cool, so you're bringing ${companionName} the ${companionType}.`);
+// alert(`Cool, so you're bringing ${companionName} the ${companionType}.`);
+
+// Spaceship Decor
+alert("NASA has an interior design team offering to outfit your spaceship.");
+alert(`You have a couple of options for the interior decor of your ship. Your options are:
+  A. Sleek, modern minimalism
+  B. Retro/vintage space age
+  C. Victorian-era steampunk
+  `);
+
+  const decorChoice = prompt("Which of these three decor options do you choose? Type A, B, or C")
+  decorChoice = decorChoice.toUpperCase();
+  
+  let decor;
+  if (decorChoice === "A") {
+    decor = "Modern minimalism";
+  } else if (decorChoice === "B") {
+    decor = "Space age";
+  } else if (decorChoice === "C") {
+    decor = "Steampunk";
+  }
+
+// Impress the user
+
 
 
 
