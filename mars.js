@@ -8,7 +8,8 @@ alert("Let's start!");
 
 // Ask username and give specific prompt
 
-const username = prompt("Hi there. What's your name?");
+let username = prompt("Hi there. What's your name?");
+username = username.trim();
 
 alert(`Hi, ${username} -- Welcome to the Mars Adventure Game.`);
 alert("Yesterday you received an email from your good friend at NASA.");
@@ -32,6 +33,7 @@ if (excited.startsWith("N")) {
 alert("It's time to pack for your trip to Mars.");
 let numSuitcases = prompt("How many suitcases do you plan to bring?");
 
+numSuitcases = numSuitcases.trim();
 numSuitcases = Number(numSuitcases);
 
 if (numSuitcases > 2) {
@@ -66,7 +68,7 @@ alert(`You have a couple of options for the interior decor of your ship. Your op
   `);
 
   let decorChoice = prompt("Which of these three decor options do you choose? Type A, B, or C")
-  decorChoice = decorChoice.toUpperCase();
+  decorChoice = decorChoice.toUpperCase().trim();
   
   let decor;
   if (decorChoice === "A") {
